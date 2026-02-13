@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://zacharyhutz-sudo.github.io',
+  base: '/hair-by-ella-grace',
   vite: {
     plugins: [tailwindcss()]
   }
