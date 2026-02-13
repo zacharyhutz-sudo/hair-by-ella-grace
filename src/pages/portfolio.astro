@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const works = [
+    { url: 'https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=1000&auto=format&fit=crop', title: 'Classic Updo' },
+    { url: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=1000&auto=format&fit=crop', title: 'Boho Braids' },
+    { url: 'https://images.unsplash.com/photo-1481833761820-0509d3217039?q=80&w=1000&auto=format&fit=crop', title: 'Hollywood Waves' },
+    { url: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop', title: 'Bridal Party' },
+    { url: 'https://images.unsplash.com/photo-1526045612212-70caf35c11bc?q=80&w=1000&auto=format&fit=crop', title: 'Elegant Curls' },
+    { url: 'https://images.unsplash.com/photo-1520699049698-acd2fccb8cc8?q=80&w=1000&auto=format&fit=crop', title: 'Minimalist Bun' },
+];
+---
+
+<Layout title="Portfolio">
+	<div class="max-w-6xl mx-auto px-6 py-20">
+		<h1 class="text-5xl font-bold tracking-tighter mb-16">Portfolio</h1>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			{works.map((work) => (
+				<div class="group cursor-pointer">
+					<div class="aspect-[3/4] overflow-hidden mb-4">
+						<img src={work.url} alt={work.title} class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+					</div>
+					<p class="uppercase tracking-widest text-xs text-stone-500">{work.title}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</Layout>

@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Booking">
+	<div class="max-w-4xl mx-auto px-6 py-20">
+		<h1 class="text-5xl font-bold tracking-tighter mb-8">Let's work together.</h1>
+		<p class="text-stone-600 mb-12 text-lg">I am currently booking for 2026 and 2027 weddings. Please fill out the form below and I will get back to you within 48 hours.</p>
+		
+		<form class="space-y-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="flex flex-col space-y-2">
+					<label class="uppercase tracking-widest text-[10px] font-bold">Full Name</label>
+					<input type="text" class="border-b border-stone-300 py-2 focus:outline-none focus:border-stone-900 bg-transparent" />
+				</div>
+				<div class="flex flex-col space-y-2">
+					<label class="uppercase tracking-widest text-[10px] font-bold">Email Address</label>
+					<input type="email" class="border-b border-stone-300 py-2 focus:outline-none focus:border-stone-900 bg-transparent" />
+				</div>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="flex flex-col space-y-2">
+					<label class="uppercase tracking-widest text-[10px] font-bold">Event Date</label>
+					<input type="date" class="border-b border-stone-300 py-2 focus:outline-none focus:border-stone-900 bg-transparent" />
+				</div>
+				<div class="flex flex-col space-y-2">
+					<label class="uppercase tracking-widest text-[10px] font-bold">Location</label>
+					<input type="text" class="border-b border-stone-300 py-2 focus:outline-none focus:border-stone-900 bg-transparent" />
+				</div>
+			</div>
+			
+			<div class="flex flex-col space-y-2">
+				<label class="uppercase tracking-widest text-[10px] font-bold">Message / Vision</label>
+				<textarea rows="4" class="border-b border-stone-300 py-2 focus:outline-none focus:border-stone-900 bg-transparent resize-none"></textarea>
+			</div>
+			
+			<button type="submit" class="bg-stone-900 text-stone-50 px-12 py-4 uppercase tracking-widest text-sm hover:bg-stone-700 transition">Send Inquiry</button>
+		</form>
+	</div>
+</Layout>
